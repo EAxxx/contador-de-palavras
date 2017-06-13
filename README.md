@@ -1,7 +1,8 @@
 # Contador de palavras
 
 Esta tarefa consiste em construir um contador de palavras. Ele devera receber
-uma linha de texto, que encerra com `\n`. Apos, devera imprimir na tela o numero
+uma linha de texto na entrada padrão (usando `scanf`), que encerra com `\n`.
+Apos, devera imprimir na saida padrão (tela, usando `printf`) o número
 de palavras encontradas nessa linha de texto. Nada mais devera ser impresso na
 tela.
 
