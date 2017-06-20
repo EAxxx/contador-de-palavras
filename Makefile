@@ -3,7 +3,7 @@ CC = gcc
 CFLAGS = -Wextra
 DIR = src
 FILENAME = $(DIR)/main.c
-TARGET = main
+TARGET = ./main
 SRCS := $(shell find $(DIR) -name '*.c')
 OBJS = $(SRCS:.c=.o)
 

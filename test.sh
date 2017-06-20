@@ -4,7 +4,7 @@
 verbose=$2
 
 # A primeira linha indica que o script foi inicializado corretamente
-if [ $verbose == 1 ]; then
+if [ $verbose -eq 1 ]; then
   echo "Testando $1"
 fi;
 
@@ -40,11 +40,11 @@ do
   # eh uma string de comprimento nao-zero
   d=`echo $res | diff  $o -`
   if [ -n "$d" ]; then
-    if [ $verbose == 1 ]; then
+    if [ $verbose -eq 1 ]; then
       echo "Teste: $t - Falhou"
     fi
   else
-    if [ $verbose == 1 ]; then
+    if [ $verbose -eq 1 ]; then
       echo "Teste $t - OK!"
     fi
     npassou=`echo $npassou + 1 | bc`
@@ -53,13 +53,13 @@ done
 
 indice=`echo "(100.0 * $npassou) / $ntestes" | bc`
 
-if [ $verbose == 1 ]; then
+if [ $verbose -eq 1 ]; then
   echo "Total de testes: $ntestes"
   echo "Total de acertos: $npassou"
   echo "Indice de acertos: $indice"
 fi;
 
-if [ $verbose == 0 ]; then
+if [ $verbose -eq 0 ]; then
   echo $indice
 fi;
 
